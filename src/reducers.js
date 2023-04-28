@@ -30,7 +30,10 @@ function baslangicNotlariniGetir(key) {
   }
 }
 
-export default function reducer(state = baslangicDegerleri, action) {
+export default function reducer(
+  state = baslangicNotlariniGetir(s10chLocalStorageKey),
+  action
+) {
   switch (action.type) {
     case NOT_EKLE:
       localStorageStateYaz(s10chLocalStorageKey, {
